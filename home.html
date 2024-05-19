@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/common.js" defer></script>
+  </head>
+  <body>
+    <div class="arrow">
+      <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+    </div>
+    <!-- Header -->
+    <header class="header">
+      <nav>
+        <div class="logo-container">
+          <a href="home.html"><img src="public/logo.png" alt="Your Logo" class="logo"></a>
+      </div>
+        <ul id="menuList">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="vacancy.html">Job</a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i></a></li>
+            <li><a href="admin.html"></a></li>
+
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+  </header>
+  
+   <!--call button-->
+   <a href="https://www.instagram.com/">
+    <div class="call"> 
+      <h2>Call Us</h2>
+      <div class="phone">
+        <img src="public/call.png">
+      </div>
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+    </div>
+  </a>
+  <!--call button-->
+
+  <div class="social-widget">
+    <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
+    <a href="#" class="social-icon " data-social="Instagram"><i class="fab fa-instagram"></i><span class="social-name">Instagram</span></a>
+    <a href="#" class="social-icon " data-social="Facebook"><i class="fab fa-facebook"></i><span class="social-name">Facebook</span></a>
+    <a href="#" class="social-icon " data-social="Twitter"><i class="fab fa-twitter"></i><span class="social-name">Twitter</span></a>
+    <a href="#" class="social-icon " data-social="LinkedIn"><i class="fab fa-linkedin"></i><span class="social-name">LinkedIn</span></a>
+    <a href="#" class="social-icon " data-social="YouTube"><i class="fab fa-youtube"></i><span class="social-name">YouTube</span></a>
+    <a href="#" class="social-icon " data-social="TikTok"><i class="fab fa-tiktok"></i><span class="social-name">TikTok</span></a>
+</div>
+
+  <!-- Page Content -->
+  <div class="page-content">
+     <!-- Home Section -->
+    <section id="home" class="section0">
+     
+      <div class="homeslider">
+        <!-- fade css -->
+        <div class="myslide fade">
+          <div class="txt">
+            <h1>IMAGE 1</h1>
+            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+          </div>
+          <img src="img/img1.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+        </div>
+        
+        <div class="myslide fade">
+          <div class="txt">
+            <h1>IMAGE 2</h1>
+            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+          </div>
+          <img src="img/img2.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+        </div>
+        
+        <div class="myslide fade">
+          <div class="txt">
+            <h1>IMAGE 3</h1>
+            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+          </div>
+          <img src="img/img3.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+        </div>
+        
+        <div class="myslide fade">
+          <div class="txt">
+            <h1>IMAGE 4</h1>
+            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+          </div>
+          <img src="img/img4.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+        </div>
+        
+        <div class="myslide fade">
+          <div class="txt">
+            <h1>IMAGE 5</h1>
+            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+          </div>
+          <img src="img/img5.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+        </div>
+        <!-- /fade css -->
+        
+        <!-- onclick js -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <!--<div class="dotsbox" style="text-align:center">
+          <span class="dot10" onclick="currentSlide(1)"></span>
+          <span class="dot10" onclick="currentSlide(2)"></span>
+          <span class="dot10" onclick="currentSlide(3)"></span>
+          <span class="dot10" onclick="currentSlide(4)"></span>
+          <span class="dot10" onclick="currentSlide(5)"></span>
+        </div>-->
+        <!-- /onclick js -->
+         </section>
+   
+    
+   
+    <section id="about" class="section1">
+      <div class='aboutr'></div>
+            <button class='aboutn'> ABOUT US</button>
+          </div>
+          <div class="aboutusreal">
+          
+            <div class="wrapper10">
+              <i class="fa-solid fa-arrow-left button" id="prev"></i>
+              <div class="image-container">
+                <div class="carousel">
+                  <img src="https://images.unsplash.com/photo-1656464868371-602be27fd4c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="" />
+                  <img src="https://images.unsplash.com/photo-1657586640569-4a3d4577328c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary green planet in space" />
+                  <img src="https://images.unsplash.com/photo-1656077217715-bdaeb06bd01f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" />
+                  
+                </div>
+                <i class="fa-solid fa-arrow-right button" id="next"></i>
+              </div>
+
+            </div>
+            <div class="dots-container9">
+              <span class="dot9"></span>
+              <span class="dot9"></span>
+              <span class="dot9"></span>
+          </div>
+
+            <div class="content-container100">
+              <!-- Content goes here -->
+              <div class="content100">
+                <h1>About AMCO </h1>
+                <h2> interiors & Furniture</h2>
+                <p>Welcome to AMCO Interior and Furniture, </p>
+                <p>your premier destination for exceptional  </p>
+                  <p>interior design solutions and high-quality </p>
+                  <p>furniture. With furniture. With seven years </p>
+                  <p> of dedicated service in the industry, we have  </p>
+                  <p>established ourselves as a trusted name, </p> 
+                  <p>renowned for our excellence, innovative </p>
+                  <p> </p>
+                  <p> designs, and commitment to customer </p>
+                  <p>satisfaction.</p>
+
+                  
+              </div>
+              
+            </div>
+
+          </div>
+    </section>
+  
+    <section id="service" class="section2">
+    
+      <div class="service19">
+        <div class="rexcc">
+        <div class='howr'></div>
+            <button class='hown'> HOW WE WORK</button>
+          </div>
+
+          <div class="max-width">
+              <div class="servicecontent">
+                <div class="card1">
+                  <div class="box">
+                    <img
+                    class="serviceimg1"
+                    alt=""
+                    src="./public/imppremovebgpreview-1@2x.png"
+                  />
+                  <h1>Implementation and<br> Execution</h1>
+                  <p>Once the design plan is finalized, <br/>designers oversee the execution of<br/>
+                    renovation tasks, managing <br/>contractors, scheduling<br/> installations, and
+                    ensuring quality <br/> control. They address any <br/>challenges that arise during<br/>
+                    the renovation process to keep the <br/>project on track and within budget</p>
+                  </div>
+                </div>
+                <div class="card1">
+                  <div class="box">
+                    <img
+                      class="serviceimg1"
+                      alt=""
+                      src="./public/cooremovebgpreview-1@2x.png"
+                    />
+                  <h1>Selection and Coordination</h1>
+                  <p>We select materials, furnishings, and<br/> fixtures that align with the
+                    client's <br/>vision and budget. They coordinate<br/> with contractors,
+                    architects, and <br/> suppliers to ensure seamless<br/> integration of design
+                    elements into <br/>the renovation process, overseeing<br/> everything from paint
+                    colors to<br/> furniture placement</p>
+                  </div>
+                </div>
+                <div class="card1">
+                  <div class="box">
+                    <img
+                  class="serviceimg1"
+                  alt=""
+                  src="./public/imppremovebgpreview-1@2x.png"
+                />
+                  <h1>Assessment and Planning</h1>
+                  <p>We assess the existing space,<br/> understand client needs, and <br/>develop a
+                    plan to optimize the <br/>layout, functionality, and aesthetics<br/> of the
+                    renovated area. They consider <br/>factors like spatial flow, lighting, and<br/>
+                    structural integrity to create a<br/> cohesive design concept.</p>
+                  </div>
+                </div>
+                <div class="card1">
+                  <div class="box">
+                    <img
+                    class="serviceimg1"
+                    alt=""
+                    src="./public/imagesremovebgpreview-2-1@2x.png"
+                  />
+                  <h1>Final Touches and Styling</h1>
+                  <p>As the renovation nears completion,<br/>designers add the finishing touches<br/>
+                    to bring the space to life.<br/> 
+                    This includes styling with decorartwork,<br/>
+                    and accessories to enhance the 
+                    <br/>overall ambiance and functionality
+                    <br/> of the renovated interior,ensuring<br/> that the client's vision is fully<br/>
+                    realized.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      <div class="servicerec">   
+        <div class='serr'></div>
+        <button class='sern'> SERVICES</button>
+          </div> 
+         <div class='uf'>
+        <div class="text-co1umn2">
+            <h1>Interior Design</h1>
+            <p>AMCO has ample experience in both interior and<br/>
+                building design. We have been engaged on office,<br/>
+                hotel, residential, hospitals and apartment. 100+<br/>
+                projects are our proofs.
+            </p>
+            <div class="image-co1umn2">
+                <img src="public/servi2.png" alt="Your Image" class="image22"/>
+            </div>
+        </div>
+      </div>
+      <img src="public/c20.png" alt="Your Image" class="imagec220"/>
+      <div class="servv">
+        <div class="image-co1umn20">
+            <img src="public/servi3.png" alt="Your Image" class="image210"/>
+        </div>
+        <div class="text-co1umn20">
+            <h1>Furniture
+              Manufacturing
+            </h1>
+                    <p>AMCO specializes in professional furniture<br/>
+                        manufacturing, offering a wide range of<br/>
+                        unique designs, trend setting workmanship,<br/>
+                        and top-quality products. Our dedicated<br/>
+                        manufacturing plant spans across a total<br/>
+                        area of 3000 square meters of land,<br/>
+                        equipped with state of the art technology<br/>
+                        and advanced machinery.
+                     </p>
+        </div>
+    </div>
+          <img src="public/c19.png" alt="Your Image" class="imagec1220"/>
+            <div class="serv">
+              <div class="image-co1umn">
+                  <img src="public/servi1.png" alt="Your Image" class="image20"/>
+              </div>
+        
+              <div class="text-co1umn">
+                  <h1>Construction</h1>
+                  <p>At AMCO, we prioritize quality in all aspects of our<br/>
+                      construction projects. From meticulous materials<br/>
+                      selection to exceptional craftsmanship, we are<br/>
+                      committed to upholding high standards. We<br/>
+                      believe that quality construction not only<br/>
+                      guarantees durable and long-lasting buildings but<br/>
+                      also leads to client satisfaction.
+                   </p>
+    
+        </div>
+        <img src="public/c19.png" alt="Your Image" class="image220"/>
+        </div>
+            <div class='feature'>
+              
+            <div class="rec4" >
+              <a href="product.html">
+            <img src="public/5.png" alt="Photo 1"/>
+            </a>
+            </div>
+            <div class="rec5" >
+              <a href="product.html">
+            <img src="public/4.png" alt="Photo 1"/>
+          </a>
+            </div>
+            <div class="niw">
+            <div class='rec7'></div>
+            <h1>INTERIOR DESIGN</h1>
+            <div class='rec8'>
+            <h2>FURNITURE</h2>
+            </div>
+            <div class="dot-container">
+              <div class="dot1"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+          </div>
+          <div class='rec219'></div>
+            <button class='nnnn'> PRODUCTS</button>
+          </div>
+          
+          <div class="ntyr">
+            <a href="product.html">
+            All Products <span class="narrow">&#8594;</span>
+          </a>
+          </div>
+       </div>
+
+
+      <div class='cti'>
+          <h1>We aim for excellence across all industries <br/>
+          we engage with in Ethiopia</h1>
+              <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="Your Image" class="nity"/>  
+              <div class="color-overlay"></div>
+      </div>
+  </div>
+    </section>
+    <section id="portfolio" class="portfolio-section">
+        <div class='portfolio-section1'>
+            <h4></h4>
+          <h1>Preferred & Admired </h1>
+          <p>Experience the satisfaction of our delighted clients who have been impressed by our past projects</p>
+          <div class='portfolio-images'>
+                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
+                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
+                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
+                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
+           </div>
+        </div>
+        <div class="wrapper">
+
+          <div class="ourteams">
+            Our Teams
+              
+          </div>
+  
+          <div class="card_Container">
+  
+              <div class="card">
+  
+                  <div class="imbBx">
+                      <img src="./img/pic01.jpg" alt="">
+                  </div>
+  
+                  <div class="content">
+                      <div class="contentBx">
+                          <h3>James Henry <br><span>Web Analyst</span></h3>
+                      </div>
+                      <ul class="sci">
+                          <li style="--i: 1">
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                          </li>
+                          <li style="--i: 2">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                          </li>
+                          <li style="--i: 3">
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+  
+              </div>
+  
+              <div class="card">
+  
+                  <div class="imbBx">
+                      <img src="./img/pic02.jpg" alt="">
+                  </div>
+  
+                  <div class="content">
+                      <div class="contentBx">
+                          <h3>John Doe <br><span>UI/UX Designer</span></h3>
+                      </div>
+                      <ul class="sci">
+                          <li style="--i: 1">
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                          </li>
+                          <li style="--i: 2">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                          </li>
+                          <li style="--i: 3">
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+  
+              </div>
+  
+              <div class="card">
+  
+                  <div class="imbBx">
+                      <img src="./img/pic03.jpg" alt="">
+                  </div>
+  
+                  <div class="content">
+                      <div class="contentBx">
+                          <h3>Mykel Smith <br><span>Front-End Web Developer</span></h3>
+                      </div>
+                      <ul class="sci">
+                          <li style="--i: 1">
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                          </li>
+                          <li style="--i: 2">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                          </li>
+                          <li style="--i: 3">
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+  
+              </div>
+  
+              <div class="card">
+  
+                  <div class="imbBx">
+                      <img src="./img/pic04.jpg" alt="">
+                  </div>
+  
+                  <div class="content">
+                      <div class="contentBx">
+                          <h3>Alex Morgan <br><span>Back-End Web Developer</span></h3>
+                      </div>
+                      <ul class="sci">
+                          <li style="--i: 1">
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                          </li>
+                          <li style="--i: 2">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                          </li>
+                          <li style="--i: 3">
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+  
+              </div>
+          </div>
+  
+      </div>
+
+
+        <div class="ourpro">OUR PREVIOUS PROJECTS</div>
+        <div class='chu'>
+          
+            <div class='cr1'>
+             
+
+              <h1></h1>
+              <div class='cr3'>
+                <img src="public/c0.png" alt="Your Image" class="proage" />
+                <div id="countingCr3" class="counting-container">
+                  <h5>1</h5>
+                </div>
+                <h3>HAPPY CUSTOMERS</h3>
+              </div>
+              <div class='cr6'>
+                <img src="public/c1.png" alt="Your Image" class="proage1" />
+                <div id="countingCr6" class="counting-container">
+                  <h5>1</h5>
+                </div>
+                <h3>COMPLETED PROJECTS</h3>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section id="contact" class="section5">
+      
+
+      
+    </section>
+    <div class="visme_d" data-title="Untitled Project" data-url="8r6oqm3m-untitled-project" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="68231"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+<div>
+</div>
+   </section>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#about">about us</a></li>
+            <li><a href="#service">our services</a></li>
+            <li><a href="product.html">produts</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Amco</h4>
+          <ul>
+            <li><a href="product.html">Our furniture </a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="blog.html">Event</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">email<br>
+            nazrawigirma598@gmail.com</a></li>
+            <li><a href="#">Location<br>
+            Meskelflower infront of Dreamlinerhotel </a></li>
+            <li><a href="#">phone <br/>
+              091020304050</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col2">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        Copyright 2024 © || NAMIK DEVELOPMENT
+      </div>
+    </div>
+ </footer>
+
+
+  <script>let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight = "0px";
+    function toggleMenu(){
+        if(menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "300px";
+        }
+        else{
+            menuList.style.maxHeight = "0px";
+        }
+    }</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+
+  
+</html>
+
+
+
+
+<!--
+  <button class='last1'> Contact Us</button>
+        <div class='sl219'></div> 
+        <div class="container26">
+          <form id="contact-form">
+              <input type="text" id="name" placeholder="Your Name" required>
+              <input type="email" id="email" placeholder="Your Email" required>
+              <input type="tel" id="phone" placeholder="Your Phone Number">
+              <textarea id="message" placeholder="Your Message" required></textarea>
+              <button type="button" id="submit-btn" class="button4">Submit</button>
+            </form>
+      </div>
+      <div class="success-message" id="success-message">
+        <p>Message sent successfully!</p>
+      </div>
+             <div class="contactf50">
+               <div class="contact-info1">
+                 <div class='cont5'>
+                 <p>Email </p>
+                 <p>Phone </p>
+                 <p>Location </p>
+                 </div>
+                 <div class="nu1">
+                 <p>smcakcmak@gmail.com</p>
+                 <p>+251-9-00-00-00</p>
+                 <p> kscamcsmcnxcx</p>
+                 </div>     
+               </div>
+             </div>
+           <h6 class='li'>Copyright 2024 © </h6>
+
+           <div class="form-container">
+        <div class="animation-container" id="animation-container"></div>
+        <form class="contact-form">
+            <h2>Contact Us</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+-->

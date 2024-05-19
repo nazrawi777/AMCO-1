@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="deatils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="home.html"><img src="public/logo.png" alt="Your Logo" class="logo"></a>
+            </div>
+            
+            <div class="menu-icon-container"> <!-- Container for menu icon -->
+                <div class="menu-icon">&#9776;</div> <!-- Add the correct class for the menu icon -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">About</a></li>
+                <li><a href="home.html">Service</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="home.html">Portfolio</a></li>
+                <li><a href="home.html">Contact</a></li>
+                <li><a href="vacancy.html">Job</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i></a></li>
+  
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--call button-->
+    <a href="https://www.instagram.com/">
+        <div class="call"> 
+          <h2>Call Us</h2>
+          <div class="phone">
+            <img src="public/call.png">
+          </div>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+        </div>
+      </a>
+      <!--call button-->
+
+    <div class="container">
+        <div class="title">PRODUCT DETAIL</div>
+        <div class="detail">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                <div class="price"></div>
+                <div class="buttons">
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="title">Similar product</div>
+        <div class="listProduct"></div>
+    </div>
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-angle-up"></i>
+      </button>  
+      
+    
+
+    <script>
+        let products = null;
+        // get datas from file json
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                showDetail();
+        })
+
+        function showDetail(){
+    // remove datas default from HTML
+        let detail = document.querySelector('.detail');
+        let listProduct = document.querySelector('.listProduct');
+        let productId =  new URLSearchParams(window.location.search).get('id');
+        let thisProduct = products.filter(value => value.id == productId)[0];
+        //if there is no product with id = productId => return to home page
+        if(!thisProduct){
+            window.location.href = "/";
+        }
+
+        detail.querySelector('.image img').src = thisProduct.image;
+        detail.querySelector('.name').innerText = thisProduct.name;
+        detail.querySelector('.price').innerText = 'ETB' + thisProduct.price;
+        detail.querySelector('.description').innerText = 'ETB' + thisProduct.description;
+
+
+        (products.filter(value => value.id != productId)).forEach(product => {
+            let newProduct = document.createElement('a');
+            newProduct.href = '/detail.html?id=' + product.id;
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
+            `<img src="${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <div class="price">ETB ${product.price}</div>`;
+            listProduct.appendChild(newProduct);
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 100) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+document.getElementById('scrollToTopBtn').addEventListener('click', scrollToTop);
+
+    </script>
+</body>
+</html>
