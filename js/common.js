@@ -135,11 +135,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const socialUrls = {
       'Telegram': 'https://telegram.org/',
       'Instagram': 'https://www.instagram.com/',
-      'Facebook': 'https://www.facebook.com/',
+      'Facebook': 'https://www.facebook.com/profile.php?id=61559804274395',
       'Twitter': 'https://twitter.com/',
       'LinkedIn': 'https://www.linkedin.com/',
       'YouTube': 'https://www.youtube.com/',
-      'TikTok': 'https://www.tiktok.com/'
+      'TikTok': 'https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1'
     };
     return socialUrls[socialName];
   }
@@ -341,4 +341,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Trigger the animation sequence for the first line
   autoWriteLine(lines[0]);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  let items = document.querySelectorAll('.carousel-container .carousel-list .carousel-item');
+  let container = document.querySelector('.carousel-container');
+  let dots = document.querySelectorAll('.carousel-dots li');
+  let nextBtn = document.querySelector('.carousel-arrows .next');
+  let prevBtn = document.querySelector('.carousel-arrows .prev');
+
+  let lastIndex = items.length - 1;
+  let activeIndex = 0;
+  let zIndex = 2;
+
+  nextBtn.onclick = () => {
+      let newIndex = activeIndex + 1 > lastIndex ? 0 : activeIndex + 1;
+      setActiveItem(newIndex);
+  };
+
+  prevBtn.onclick = () => {
+      let newIndex = activeIndex - 1 < 0 ? lastIndex : activeIndex - 1;
+      setActiveItem(newIndex);
+  };
+
+  dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+          setActiveItem(index);
+      });
+  });
+
+  const setActiveItem = (newIndex) => {
+      if (newIndex === activeIndex) return;
+      activeIndex = newIndex;
+      showSlider();
+  };
+
+  const showSlider = () => {
+      container.style.pointerEvents = 'none';
+      let activeItem = document.querySelector('.carousel-container .carousel-list .carousel-item.active');
+      if (activeItem) activeItem.classList.remove('active');
+      zIndex++;
+      items[activeIndex].style.zIndex = zIndex;
+      items[activeIndex].classList.add('active');
+
+      container.classList.add('effect');
+
+      let activeDot = document.querySelector('.carousel-dots li.active');
+      if (activeDot) activeDot.classList.remove('active');
+      dots[activeIndex].classList.add('active');
+
+      clearTimeout(removeEffect);
+      removeEffect = setTimeout(() => {
+          container.classList.remove('effect');
+          container.style.pointerEvents = 'auto';
+      }, 1500);
+
+      clearTimeout(autoRun);
+      autoRun = setTimeout(() => {
+          nextBtn.click();
+      }, 5000);
+  };
+
+  let removeEffect;
+  let autoRun = setTimeout(() => {
+      nextBtn.click();
+  }, 5000);
 });

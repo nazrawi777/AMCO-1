@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
@@ -14,29 +14,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/common.js" defer></script>
   </head>
-  <body>
+  <body class="home-page">
     <div class="arrow">
       <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
     </div>
+    <div class="arrow1">
+      <a href="#contact" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
+  </div>
     <!-- Header -->
     <header class="header">
       <nav>
         <div class="logo-container">
           <a href="home.html"><img src="public/logo.png" alt="Your Logo" class="logo"></a>
       </div>
-        <ul id="menuList">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="vacancy.html">Job</a></li>
-            <li><a href="login.html"><i class="fas fa-user"></i></a></li>
-            <li><a href="admin.html"></a></li>
-
-        </ul>
+      <ul id="menuList">
+        <li><a id="home" href="home.html">Home</a></li>
+        <li class="dropdown">
+            <a class="dropbtn">About
+                <span class="fas fa-angle-down"></span>
+            </a>
+            <div class="dropdown-content">
+                <a id="about" href="about.html">About Us</a>
+                <a  href="#portfolio">Portfolio</a>
+            </div>
+        </li>
+        <li><a href="#service">Service</a></li>
+        <li><a id="products" href="product.html">Products</a></li>
+        <li><a  href="#contact">Contact</a></li>
+        <li><a id="vacancy" href="vacancy.html">Vacancy</a></li>
+        <li><a id="login" href="login.html"><i class="fas fa-user"></i></a></li>
+    </ul>
         <div class="menu-icon">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </div>
@@ -78,7 +85,7 @@
             <h1>IMAGE 1</h1>
             <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
           </div>
-          <img src="img/img1.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+          <img src="/AMCO-1/img/EI7A3715.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
         </div>
         
         <div class="myslide fade">
@@ -86,7 +93,7 @@
             <h1>IMAGE 2</h1>
             <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
           </div>
-          <img src="img/img2.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+          <img src="/AMCO-1/img/EI7A3708.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
         </div>
         
         <div class="myslide fade">
@@ -94,29 +101,14 @@
             <h1>IMAGE 3</h1>
             <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
           </div>
-          <img src="img/img3.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
+          <img src="/AMCO-1/img/EI7A3700.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
         </div>
         
-        <div class="myslide fade">
-          <div class="txt">
-            <h1>IMAGE 4</h1>
-            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
-          </div>
-          <img src="img/img4.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
-        </div>
-        
-        <div class="myslide fade">
-          <div class="txt">
-            <h1>IMAGE 5</h1>
-            <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
-          </div>
-          <img src="img/img5.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
-        </div>
+       
         <!-- /fade css -->
         
         <!-- onclick js -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+ 
         
         <!--<div class="dotsbox" style="text-align:center">
           <span class="dot10" onclick="currentSlide(1)"></span>
@@ -140,9 +132,9 @@
               <i class="fa-solid fa-arrow-left button" id="prev"></i>
               <div class="image-container">
                 <div class="carousel">
-                  <img src="https://images.unsplash.com/photo-1656464868371-602be27fd4c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="" />
-                  <img src="https://images.unsplash.com/photo-1657586640569-4a3d4577328c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary green planet in space" />
-                  <img src="https://images.unsplash.com/photo-1656077217715-bdaeb06bd01f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" />
+                  <img src="/AMCO-1/img/EI7A3697.jpg" alt="" />
+                  <img src="/AMCO-1/img/EI7A3699.jpg" />
+                  <img src="/AMCO-1/img/EI7A3703.jpg" />
                   
                 </div>
                 <i class="fa-solid fa-arrow-right button" id="next"></i>
@@ -256,19 +248,33 @@
         <button class='sern'> SERVICES</button>
           </div> 
          <div class='uf'>
-        <div class="text-co1umn2">
-            <h1>Interior Design</h1>
-            <p>AMCO has ample experience in both interior and<br/>
-                building design. We have been engaged on office,<br/>
-                hotel, residential, hospitals and apartment. 100+<br/>
-                projects are our proofs.
-            </p>
-            <div class="image-co1umn2">
-                <img src="public/servi2.png" alt="Your Image" class="image22"/>
+          <div class="custom-slider-container1">
+            <input type="radio" name="slider2" id="dot1" checked>
+            <input type="radio" name="slider2" id="dot2">
+            <input type="radio" name="slider2" id="dot3">
+            <input type="radio" name="slider2" id="dot4">
+            <input type="radio" name="slider2" id="dot5">
+            
+            <div class="slides2">
+              <div class="slide1">
+                <video src="img/Adulian_Advert_full_interior_design_and_work_from_Amco_wN4TvnFtcBs.mp4" controls></video>
+              </div>
+              <div class="slide1">
+                <video src="img/Adulian_Advert_full_interior_design_and_work_from_Amco_wN4TvnFtcBs.mp4" controls></video>
+              </div>
             </div>
-        </div>
-      </div>
-      <img src="public/c20.png" alt="Your Image" class="imagec220"/>
+          
+            <!-- Navigation dots -->
+            <div class="custom-dots1">
+              <label for="dot1"></label>
+              <label for="dot2"></label>
+              <label for="dot3"></label>
+              <label for="dot4"></label>
+              <label for="dot5"></label>
+            </div>
+          </div>
+          </div>
+
       <div class="servv">
         <div class="image-co1umn20">
             <img src="public/servi3.png" alt="Your Image" class="image210"/>
@@ -308,6 +314,7 @@
         </div>
         <img src="public/c19.png" alt="Your Image" class="image220"/>
         </div>
+        
             <div class='feature'>
               
             <div class="rec4" >
@@ -335,12 +342,7 @@
             <button class='nnnn'> PRODUCTS</button>
           </div>
           
-          <div class="ntyr">
-            <a href="product.html">
-            All Products <span class="narrow">&#8594;</span>
-          </a>
-          </div>
-       </div>
+        
 
 
       <div class='cti'>
@@ -349,133 +351,80 @@
               <img src="https://www.visionplusbusiness.it/materiale/header-about.jpg" alt="Your Image" class="nity"/>  
               <div class="color-overlay"></div>
       </div>
+   </div>
+   <div class="rectangle">
+    <div class="hiv">
+        <h2>All Products</h2>
+        <button class="next-button"><i class="fas fa-arrow-right"></i></button>
+    </div>
+</div>
   </div>
+
     </section>
     <section id="portfolio" class="portfolio-section">
-        <div class='portfolio-section1'>
-            <h4></h4>
-          <h1>Preferred & Admired </h1>
-          <p>Experience the satisfaction of our delighted clients who have been impressed by our past projects</p>
-          <div class='portfolio-images'>
-                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
-                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
-                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
-                <img src="public/logo.png" alt="Your Image" class="portfolio-image" />
-           </div>
-        </div>
-        <div class="wrapper">
-
-          <div class="ourteams">
-            Our Teams
-              
+      <div class='portfolio-section1'>
+        <h4></h4>
+        <h1>Preferred & Admired</h1>
+        <p>Experience the satisfaction of our delighted clients who have been impressed by our past projects</p>
+            <!-- Radio buttons for navigation -->
+            <div class="custom-slider-container11">
+              <input type="radio" name="slider22" id="dot1" checked>
+              <input type="radio" name="slider22" id="dot2">
+              <input type="radio" name="slider22" id="dot3">
+              <input type="radio" name="slider22" id="dot4">
+              <input type="radio" name="slider22" id="dot5">
+            
+              <div class="slides22">
+                <div class="slide21">
+                  <iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="slide21">
+                  <iframe src="https://www.youtube.com/embed/wN4TvnFtcBs" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="slide21">
+                  <iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="slide21">
+                  <iframe src="https://www.youtube.com/embed/tVvgP3gz_U8" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="slide21">
+                  <iframe src="https://www.youtube.com/embed/tVvgP3gz_U8" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            
+              <!-- Navigation dots -->
+              <div class="custom-dots11">
+                <label for="dot1"></label>
+                <label for="dot2"></label>
+                <label for="dot3"></label>
+                <label for="dot4"></label>
+                <label for="dot5"></label>
+              </div>
+            </div>
+            
+          
+     <div class="ourclients">
+      <h2>Our Clients</h2>
+      <div class="scroll imgx">
+          <div class="scrolling-content">
+              <img src="img/1.png" alt="">
+              <img src="img/7.png" alt="">
+              <img src="img/6.png" alt="">
+              <img src="img/5.png" alt="">
+              <img src="img/4.png" alt="">
+              <img src="img3.png" alt="">
+              <img src="img/2.png" alt="">
+              <!-- Duplicate the set of images -->
+              <img src="img/1.png" alt="">
+              <img src="img/7.png" alt="">
+              <img src="img/6.png" alt="">
+              <img src="img/5.png" alt="">
+              <img src="img/4.png" alt="">
+              <img src="img3.png" alt="">
+              <img src="img/2.png" alt="">
           </div>
-  
-          <div class="card_Container">
-  
-              <div class="card">
-  
-                  <div class="imbBx">
-                      <img src="./img/pic01.jpg" alt="">
-                  </div>
-  
-                  <div class="content">
-                      <div class="contentBx">
-                          <h3>James Henry <br><span>Web Analyst</span></h3>
-                      </div>
-                      <ul class="sci">
-                          <li style="--i: 1">
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                          </li>
-                          <li style="--i: 2">
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                          </li>
-                          <li style="--i: 3">
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                          </li>
-                      </ul>
-                  </div>
-  
-              </div>
-  
-              <div class="card">
-  
-                  <div class="imbBx">
-                      <img src="./img/pic02.jpg" alt="">
-                  </div>
-  
-                  <div class="content">
-                      <div class="contentBx">
-                          <h3>John Doe <br><span>UI/UX Designer</span></h3>
-                      </div>
-                      <ul class="sci">
-                          <li style="--i: 1">
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                          </li>
-                          <li style="--i: 2">
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                          </li>
-                          <li style="--i: 3">
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                          </li>
-                      </ul>
-                  </div>
-  
-              </div>
-  
-              <div class="card">
-  
-                  <div class="imbBx">
-                      <img src="./img/pic03.jpg" alt="">
-                  </div>
-  
-                  <div class="content">
-                      <div class="contentBx">
-                          <h3>Mykel Smith <br><span>Front-End Web Developer</span></h3>
-                      </div>
-                      <ul class="sci">
-                          <li style="--i: 1">
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                          </li>
-                          <li style="--i: 2">
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                          </li>
-                          <li style="--i: 3">
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                          </li>
-                      </ul>
-                  </div>
-  
-              </div>
-  
-              <div class="card">
-  
-                  <div class="imbBx">
-                      <img src="./img/pic04.jpg" alt="">
-                  </div>
-  
-                  <div class="content">
-                      <div class="contentBx">
-                          <h3>Alex Morgan <br><span>Back-End Web Developer</span></h3>
-                      </div>
-                      <ul class="sci">
-                          <li style="--i: 1">
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                          </li>
-                          <li style="--i: 2">
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                          </li>
-                          <li style="--i: 3">
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                          </li>
-                      </ul>
-                  </div>
-  
-              </div>
-          </div>
-  
       </div>
-
-
+  </div>
         <div class="ourpro">OUR PREVIOUS PROJECTS</div>
         <div class='chu'>
           
@@ -502,10 +451,10 @@
     </section>
     <section id="contact" class="section5">
       
-
+      <div class="visme_d" data-title="Untitled Project" data-url="ojeo0374-untitled-project" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="69309"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
       
     </section>
-    <div class="visme_d" data-title="Untitled Project" data-url="8r6oqm3m-untitled-project" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="68231"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    
 <div>
 </div>
    </section>
@@ -576,6 +525,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script>document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.gallery-image');
+    const videoModal = document.getElementById('video-modal');
+    const videoContainer = document.getElementById('video-container');
+    const closeBtn = document.getElementById('close-btn');
+  
+    images.forEach(image => {
+      image.addEventListener('click', function() {
+        const videoId = this.getAttribute('data-video-id');
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.allowFullscreen = true;
+  
+        // Get position and size of clicked image
+        const rect = image.getBoundingClientRect();
+        const imageWidth = rect.width;
+        const imageHeight = rect.height;
+        const imageTop = rect.top + window.scrollY;
+        const imageLeft = rect.left + window.scrollX;
+  
+        // Set video modal position
+        videoModal.style.top = imageTop + 'px';
+        videoModal.style.left = imageLeft + 'px';
+  
+        // Set video container size
+        videoContainer.style.width = imageWidth + 'px';
+        videoContainer.style.height = imageHeight + 'px';
+  
+        videoContainer.appendChild(iframe);
+        videoModal.style.display = 'block';
+      });
+    });
+  
+    closeBtn.addEventListener('click', function() {
+      videoContainer.innerHTML = ''; // Clear the iframe content
+      videoModal.style.display = 'none';
+    });
+  
+    // Close the modal when clicking outside the video container
+    window.addEventListener('click', function(event) {
+      if (event.target === videoModal) {
+        videoContainer.innerHTML = ''; // Clear the iframe content
+        videoModal.style.display = 'none';
+      }
+    });
+  });
+  </script>
+  <script>
+    document.querySelectorAll('iframe').forEach(iframe => {
+        // Adding a message event listener to detect video play and pause events
+        window.addEventListener('message', function(event) {
+            const data = JSON.parse(event.data);
+            if (data.event === 'infoDelivery' && data.info) {
+                if (data.info.playerState === 1) {
+                    // Video is playing
+                    document.querySelector('.slides').style.animationPlayState = 'paused';
+                } else if (data.info.playerState === 2) {
+                    // Video is paused
+                    document.querySelector('.slides').style.animationPlayState = 'running';
+                }
+            }
+        });
+
+        // Function to send a postMessage to the YouTube iframe
+        function sendMessage(action, value) {
+            iframe.contentWindow.postMessage(JSON.stringify({
+                event: 'command',
+                func: action,
+                args: [value]
+            }), '*');
+        }
+
+        // Attach event listener to check when iframe is interacted with
+        iframe.addEventListener('load', () => {
+            sendMessage('addEventListener', 'onStateChange');
+        });
+    });
+</script>
+
   </body>
 
   
